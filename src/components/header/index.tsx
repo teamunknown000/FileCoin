@@ -1,4 +1,8 @@
-import { Search, ShoppingCart, Person } from "~/utils/mui";
+import {
+  ShoppingCart,
+  Search,
+  Person
+} from "@mui/icons-material"
 import "./style.scss";
 
 const Header = () => {
