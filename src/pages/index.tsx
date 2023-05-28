@@ -1,7 +1,12 @@
+import { dark } from "~/styles/palette"
 
 export default function Home() {
   return (
-    <div>
+    <div style={{
+      minHeight: "100vh",
+      backgroundColor: dark.bgColor,
+      color: dark.primaryColor
+    }}>
       something
     </div>
   );
