@@ -10,12 +10,12 @@
   position: sticky;
   top: 0;
   color: $primary-color;
-  background-color: $bg-color;
-
+  
   &>.main {
     display: flex;
+    background-color: #00000006;
+    backdrop-filter: blur(25px) saturate(6);
     justify-content: space-between;
-    background-color: $bg-color;
     width: 80%;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -23,7 +23,6 @@
     padding-right: 1rem;
     border-radius: .8rem;
     border: 1px solid $primary-color;
-
     &>.center, &>.right {
       display: flex;
       gap: 1.5rem;
