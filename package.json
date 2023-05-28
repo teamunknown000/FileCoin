@@ -15,6 +15,7 @@
     "@types/validator": "^13.7.17",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
+    "hardhat": "^2.14.0",
     "sass": "^1.62.1",
     "ts-node": "^10.9.1",
     "typescript": "5.0.4"
