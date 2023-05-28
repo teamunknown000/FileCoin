@@ -1,27 +1,25 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
-import styles from "./style.scss?inline";
 import { Search, ShoppingCart, Person } from "~/utils/mui";
+import "./style.scss";
 
-export default component$(() => {
-  useStylesScoped$(styles);
+const Header = () => {
   return (
-    <div class="header-container">
-      <div class="main">
-        <div class="left">
-          Logo
-        </div>
-        <div class="center">
+    <div className="header-container">
+      <div className="main">
+        <div className="left">Logo</div>
+        <div className="center">
           <div>Home</div>
           <div>Products</div>
           <div>Categories</div>
           <div>About</div>
         </div>
-        <div class="right">
-            <Search fontSize="large"/>
-            <ShoppingCart fontSize="large"/>
-            <Person fontSize="large"/>
+        <div className="right">
+          <Search fontSize="large" />
+          <ShoppingCart fontSize="large" />
+          <Person fontSize="large" />
         </div>
       </div>
     </div>
   );
-});
+};
+
+export default Header;
