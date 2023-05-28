@@ -1,4 +1,3 @@
-import { qwikify$ } from "@builder.io/qwik-react";
 import {
   Box as MuiBox,
   Grid as MuiGrid,
@@ -7,6 +6,7 @@ import {
   Badge as MuiBadge,
   Divider as MuiDivider,
 } from "@mui/material";
+
 import {
   Search as SearchIcon,
   ShoppingCart as ShoppingCartIcon,
@@ -18,18 +18,18 @@ import {
 } from "@mui/icons-material";
 
 // Components
-export const Box = qwikify$(MuiBox);
-export const Button = qwikify$(MuiButton);
-export const Card = qwikify$(MuiCard);
-export const Grid = qwikify$(MuiGrid);
-export const Badge = qwikify$(MuiBadge);
-export const Divider = qwikify$(MuiDivider);
+export const Box = MuiBox;
+export const Button = MuiButton;
+export const Card = MuiCard;
+export const Grid = MuiGrid;
+export const Badge = MuiBadge;
+export const Divider = MuiDivider;
 
 // Icons
-export const Search = qwikify$(SearchIcon);
-export const ShoppingCart = qwikify$(ShoppingCartIcon);
-export const Person = qwikify$(PersonIcon);
-export const Instagram = qwikify$(InstagramIcon);
-export const LinkedIn = qwikify$(LinkedInIcon);
-export const Twitter = qwikify$(TwitterIcon);
-export const GitHub = qwikify$(GitHubIcon);
+export const Search = SearchIcon;
+export const ShoppingCart = ShoppingCartIcon;
+export const Person = PersonIcon;
+export const Instagram = InstagramIcon;
+export const LinkedIn = LinkedInIcon;
+export const Twitter = TwitterIcon;
+export const GitHub = GitHubIcon;

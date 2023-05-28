@@ -1,15 +1,13 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
-import styles from "./style.scss?inline";
 import { Instagram, GitHub, Twitter, LinkedIn } from "~/utils/mui";
+import "./style.scss";
 
-export default component$(() => {
-  useStylesScoped$(styles);
+const Footer = () => {
   return (
-    <div class="footer">
-      <div class="footer-container">
-        <div class="left">
-          <div class="title">ShopSync</div>
-          <div class="logos">
+    <div className="footer">
+      <div className="footer-container">
+        <div className="left">
+          <div className="title">ShopSync</div>
+          <div className="logos">
             <div>
               <Instagram />
             </div>
@@ -24,35 +22,35 @@ export default component$(() => {
             </div>
           </div>
         </div>
-        <div class="center-left">
-          <div class="title">Pages</div>
-          <div class="pages">
-            <div class="page">Home</div>
-            <div class="page">About Us</div>
-            <div class="page">Shop</div>
-            <div class="page">FAQs</div>
-            <div class="page">Contact Us</div>
+        <div className="center-left">
+          <div className="title">Pages</div>
+          <div className="pages">
+            <div className="page">Home</div>
+            <div className="page">About Us</div>
+            <div className="page">Shop</div>
+            <div className="page">FAQs</div>
+            <div className="page">Contact Us</div>
           </div>
         </div>
-        <div class="center-right">
-          <div class="title">Other Links</div>
-          <div class="links">
-            <div class="link">Sell your Items</div>
-            <div class="link">Privacy Policy</div>
-            <div class="link">Terms and Condition</div>
-            <div class="link">Return and Exchange Policy</div>
+        <div className="center-right">
+          <div className="title">Other Links</div>
+          <div className="links">
+            <div className="link">Sell your Items</div>
+            <div className="link">Privacy Policy</div>
+            <div className="link">Terms and Condition</div>
+            <div className="link">Return and Exchange Policy</div>
           </div>
         </div>
-        <div class="right">
-          <div class="title">Contact Us</div>
-          <div class="contacts">
-            <div class="contact">Mobile No.</div>
-            <div class="contact">Email</div>
-            <div class="contact">Address</div>
+        <div className="right">
+          <div className="title">Contact Us</div>
+          <div className="contacts">
+            <div className="contact">Mobile No.</div>
+            <div className="contact">Email</div>
+            <div className="contact">Address</div>
           </div>
         </div>
       </div>
-      <div class="bottom">
+      <div className="bottom">
         <div>
           @2023 Copyright <strong>ShopSync</strong>
         </div>
@@ -63,4 +61,6 @@ export default component$(() => {
       </div>
     </div>
   );
-});
+};
+
+export default Footer;
