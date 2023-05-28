@@ -8,6 +8,11 @@ const Footer = () => {
         <div className="left">
           <div className="title">ShopSync</div>
           <div className="logos">
+    <div className="footer">
+      <div className="footer-container">
+        <div className="left">
+          <div className="title">ShopSync</div>
+          <div className="logos">
             <div>
               <Instagram />
             </div>
@@ -39,8 +44,21 @@ const Footer = () => {
             <div className="link">Privacy Policy</div>
             <div className="link">Terms and Condition</div>
             <div className="link">Return and Exchange Policy</div>
+        <div className="center-right">
+          <div className="title">Other Links</div>
+          <div className="links">
+            <div className="link">Sell your Items</div>
+            <div className="link">Privacy Policy</div>
+            <div className="link">Terms and Condition</div>
+            <div className="link">Return and Exchange Policy</div>
           </div>
         </div>
+        <div className="right">
+          <div className="title">Contact Us</div>
+          <div className="contacts">
+            <div className="contact">Mobile No.</div>
+            <div className="contact">Email</div>
+            <div className="contact">Address</div>
         <div className="right">
           <div className="title">Contact Us</div>
           <div className="contacts">
