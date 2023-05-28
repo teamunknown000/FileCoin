@@ -3,20 +3,20 @@ import {
   Search,
   Person
 } from "@mui/icons-material"
-import "./style.scss";
+import styles from "./style.module.scss";
 
 const Header = () => {
   return (
-    <div className="header-container">
-      <div className="main">
-        <div className="left">Logo</div>
-        <div className="center">
+    <div className={styles["header-container"]}>
+      <div className={styles["main"]}>
+        <div className={styles["left"]}>Logo</div>
+        <div className={styles["center"]}>
           <div>Home</div>
           <div>Products</div>
           <div>Categories</div>
           <div>About</div>
         </div>
-        <div className="right">
+        <div className={styles["right"]}>
           <Search fontSize="large" />
           <ShoppingCart fontSize="large" />
           <Person fontSize="large" />
