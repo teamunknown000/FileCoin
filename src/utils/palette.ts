@@ -1,0 +1,2 @@
+export const dark = { bgColor: "#000000", primaryColor: "#C69749", secondaryColor: "#735F32", tertiaryColor: "#282A3A" }
+export const light = { bgColor: "#ffffff", primaryColor: "#C69749", secondaryColor: "#735F32", tertiaryColor: "#282A3A" }

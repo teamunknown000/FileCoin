@@ -1,0 +1,68 @@
+@import "src/styles/palette.dark.scss";
+
+
+
+.footer{
+    background-color: $bg-color;
+    color: $secondary-color;
+    font-size: 20px;
+    &>.footer-container{
+        padding: 1rem;
+        display: flex;
+        position: relative;
+        border-top: 3px solid;
+        border-bottom: 3px solid;
+        border-top-left-radius: 5rem;
+        border: 3px solid;
+        border-radius: 4rem;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding-top: 4rem;
+        &>.left{
+            display: flex;
+            flex-direction: column;
+            &>.title{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 10rem;
+            }
+            &>.logos{
+                display: flex;
+                gap: 2rem;
+            }
+        }
+        &>.center-left,&>.center-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 2rem;
+            & .title{
+                color: $primary-color
+            }
+            &>.pages, &>.links{
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+                &>.page{
+                }
+            }
+        }
+        &>.right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 2rem;
+            &>.contacts{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    }
+    &>.bottom{
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem;
+    }
+}
