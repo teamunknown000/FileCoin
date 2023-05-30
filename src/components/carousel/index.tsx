@@ -1,6 +1,7 @@
 import type { Schema } from "mongoose";
 import MuiCarousel from "react-material-ui-carousel";
 import IProduct from "~/types/product";
+import Image from "next/image"
 
 interface ProductProps {
   url: string;
@@ -25,17 +26,17 @@ const Product = (props: ProductProps) => {
           paddingRight: "5px",
         }}
       >
-        <img
+        <Image
           style={{
             borderBottomRightRadius: "6rem",
             borderBottomLeftRadius: "6rem",
             borderTopLeftRadius: "3px",
             borderTopRightRadius: "3px",
+            height: "750px",
+            width: "100%"
           }}
           src={props.url}
           alt="home page image"
-          height="750px"
-          width="100%"
         />
       </div>
     </div>

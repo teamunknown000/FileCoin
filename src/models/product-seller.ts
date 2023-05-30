@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model, models } from "mongoose";
 import type IProductSeller from "~/types/product-seller";
 import { Models } from "~/utils";
 import Errors from "~/errors/product-seller";
@@ -6,7 +6,7 @@ import { Plans } from "~/types/plan";
 
 const ProductSellerErrors = new Errors(Models.productSeller)
 
-export default model<IProductSeller>(Models.productSeller, new Schema<IProductSeller>({
+export default models[Models.productSeller] || model<IProductSeller>(Models.productSeller, new Schema<IProductSeller>({
     product: {
         type: Schema.Types.ObjectId,
         required: ProductSellerErrors.modelFieldRequired("product"),

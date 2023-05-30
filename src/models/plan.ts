@@ -1,11 +1,11 @@
-import { Schema, model } from "mongoose";
+import { Schema, model, models } from "mongoose";
 import type IPlan from "~/types/plan";
 import { Models } from "~/utils";
 import Errors from "~/errors/plan";
 
 const PlanErrors = new Errors(Models.plan)
 
-export default model<IPlan>(Models.plan, new Schema<IPlan>({
+export default models[Models.plan] || model<IPlan>(Models.plan, new Schema<IPlan>({
     name: {
         type: String,
         required: PlanErrors.modelFieldRequired("name")

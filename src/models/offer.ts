@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model, models } from "mongoose";
 import Errors from "~/errors/offer";
 import type IOffer from "~/types/offer";
 import { Plans } from "~/types/plan";
@@ -6,7 +6,7 @@ import { Models } from "~/utils";
 
 const OfferErrors = new Errors(Models.offer)
 
-export default model<IOffer>(Models.offer, new Schema<IOffer>({
+export default models[Models.offer] || model<IOffer>(Models.offer, new Schema<IOffer>({
     name: {
         type: String,
         required: OfferErrors.modelFieldRequired("name")

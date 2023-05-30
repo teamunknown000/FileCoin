@@ -1,4 +1,4 @@
-import { model, Schema } from "mongoose";
+import { model, Schema, models } from "mongoose";
 import Errors from "~/errors/user";
 import { Plans } from "~/types/plan";
 import type IUser from "~/types/user";
@@ -10,7 +10,7 @@ const UserErrors = new Errors(Models.user)
 const userTypes = Object.keys(UserTypes);
 const planTypes = Object.keys(Plans)
 
-export default model<IUser>(Models.user, new Schema<IUser>({
+export default models[Models.user] || model<IUser>(Models.user, new Schema<IUser>({
     name: {
         type: String,
         required: UserErrors.modelFieldRequired("name")

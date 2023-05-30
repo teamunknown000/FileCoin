@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model, models } from "mongoose";
 import type IAddress from "~/types/address";
 import { Models } from "~/utils/";
 import Errors from "~/errors/address";
@@ -8,7 +8,7 @@ import { validatePhone } from "~/utils/validators";
 const AddressErrors = new Errors(Models.address)
 const addressTypes = Object.keys(AddressTypes)
 
-export default model<IAddress>(Models.address, new Schema<IAddress>({
+export default models[Models.address] || model<IAddress>(Models.address, new Schema<IAddress>({
     name: {
         type: String,
         required: AddressErrors.modelFieldRequired("name")
