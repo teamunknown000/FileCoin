@@ -10,6 +10,5 @@ export default async function handler(
 ) {
     await connect()
     const data = await Product.find()
-    console.log(data)
-    res.status(data ? 200 : 400).send(Errors.generateResponse(data ? data : Errors.DB_ERROR, data !== undefined))
+    res.status(data?200:400).send(Errors.generateResponse(data?data:Errors.DB_ERROR, data !== undefined))
 }
