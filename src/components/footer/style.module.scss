@@ -22,13 +22,13 @@
             flex-direction: column;
             &>.title{
                 display: flex;
-                justify-content: center;
-                align-items: center;
                 height: 10rem;
             }
             &>.logos{
                 display: flex;
                 gap: 2rem;
+                justify-content: center;
+                color: $primary-color
             }
         }
         &>.center-left,&>.center-right{
@@ -64,5 +64,6 @@
         display: flex;
         justify-content: space-between;
         padding: 3rem;
+        color: $primary-color
     }
 }

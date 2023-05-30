@@ -21,5 +21,10 @@ export default models[Models.product] || model<IProduct>(Models.product, new Sch
     thumbImage: {
         type: Number,
         default: 0
+    },
+    categories: {
+        type: [Schema.Types.ObjectId],
+        ref: Models.category,
+        default: []
     }
 }))
