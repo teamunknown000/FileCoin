@@ -27,7 +27,7 @@ const ProductCarousel = () => {
     }
     k = end;
     displayProducts.push(
-      <div key={i}>
+      <div key={i} style={{ display: "flex", justifyContent: "center" }}>
         {tempArr.map((prod, j) => (
           <MyCard key={j} cardNo={prod} />
         ))}
