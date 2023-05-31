@@ -174,6 +174,7 @@ const Header = () => {
               color: "inherit",
               display: "flex",
               alignItems: "center",
+              cursor: "pointer",
             }}
             onClick={toggleDrawer("right", true)}
           >
