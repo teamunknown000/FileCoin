@@ -3,11 +3,38 @@ import styles from "./style.module.scss";
 import Link from "next/link";
 import { Box, Button, Typography, SwipeableDrawer } from "@mui/material";
 import { useState } from "react";
+import CartCard from "../cart-card";
 declare var window: any;
 
 type Anchor = "right";
 
 const Header = () => {
+  const demoCartProd = [
+    {
+      id: 1,
+      imageUrl:
+        "https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      name: "Colorful sneakers",
+      price: "$19.99",
+      quantity: 2,
+    },
+    {
+      id: 2,
+      imageUrl:
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZHVjdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      name: "Sport sneakers",
+      price: "$21.99",
+      quantity: 1,
+    },
+    {
+      id: 3,
+      imageUrl:
+        "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      name: "iWatch",
+      price: "$99.99",
+      quantity: 3,
+    },
+  ];
   const [state, setState] = useState({
     right: false,
   });
@@ -38,6 +65,29 @@ const Header = () => {
         <Typography sx={{ paddingTop: "1rem" }} variant="h3">
           Cart Overview
         </Typography>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
+          alignItems: "center",
+          paddingTop: "2rem",
+          paddingBottom: "2rem",
+        }}
+      >
+        {demoCartProd.map((product, i) => (
+          <CartCard product={product} key={i} />
+        ))}
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          paddingBottom: "1rem",
+        }}
+      >
+        <Button>Buy</Button>
       </div>
     </Box>
   );
@@ -147,7 +197,9 @@ const Header = () => {
         </div>
       </div>
       <div className={styles["wallet-btn"]}>
-        <Button sx={{ color: "inherit" }}>Connect Wallet</Button>
+        <Button sx={{ color: "inherit", fontSize: "large", height: "100%" }}>
+          Connect Wallet
+        </Button>
       </div>
       <SwipeableDrawer
         anchor={"right"}

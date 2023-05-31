@@ -1,0 +1,43 @@
+@import "src/styles/palette.dark.scss";
+
+.profile-page{
+    min-height: 100vh;
+    color: $tertiary-color;
+    &>.profile-title{
+        padding-top: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        background-color: $primary-color;
+        flex-direction: column;
+    }
+    & .profile-description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $primary-color;
+        width: 100%;
+        &>.details{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            padding-top: 2rem;
+            &>.detail{
+                display: flex;
+                gap: 4rem;
+                &>.inner-box{
+                    background-color: white;
+                    width: 20rem;
+                    min-height: 3rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: black;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
