@@ -28,7 +28,8 @@
                 display: flex;
                 gap: 2rem;
                 justify-content: center;
-                color: $primary-color
+                color: $primary-color;
+                align-items: flex-start;
             }
         }
         &>.center-left,&>.center-right{

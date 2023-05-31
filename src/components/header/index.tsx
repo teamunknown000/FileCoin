@@ -4,11 +4,24 @@ import Link from "next/link";
 import { Box, Button, Typography, SwipeableDrawer } from "@mui/material";
 import { useState } from "react";
 import CartCard from "../cart-card";
+import { useMetaMask } from "~/context/context";
 declare var window: any;
 
 type Anchor = "right";
 
 const Header = () => {
+  const {
+    accountAddr,
+    chainId,
+    provider,
+    contract,
+    setContract,
+    setAccountAddr,
+    setChainId,
+    setProvider,
+  } = useMetaMask();
+  console.log(`${accountAddr} ${chainId} ${setProvider} ${setContract}`);
+
   const demoCartProd = [
     {
       id: 1,
@@ -92,23 +105,6 @@ const Header = () => {
     </Box>
   );
 
-  // const connectWalletHandler = async () => {
-  //   if (window.ethereum) {
-  //     const accounts = await window.ethereum.request({
-  //       method: "eth_requestAccounts",
-  //     });
-  //     window.ethereum.on("chainChanged", () => {
-  //       window.location.reload();
-  //     });
-  //     window.ethereum.on("accountsChanged", () => {
-  //       window.location.reload();
-  //     });
-  //     let accountAddress = accounts[0];
-  //     console.log(accountAddress);
-  //   } else {
-  //     alert("Please Install Metamask");
-  //   }
-  // };
   return (
     <div className={styles["header-container"]}>
       <div className={styles["main"]}>
@@ -198,7 +194,9 @@ const Header = () => {
       </div>
       <div className={styles["wallet-btn"]}>
         <Button sx={{ color: "inherit", fontSize: "large", height: "100%" }}>
-          Connect Wallet
+          {accountAddr
+            ? accountAddr.slice(0, 5) + "..." + accountAddr.slice(38, 43)
+            : "Connect Wallet"}
         </Button>
       </div>
       <SwipeableDrawer
