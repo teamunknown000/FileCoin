@@ -8,7 +8,12 @@ const Footer = () => {
       <div className={styles["footer-container"]}>
         <div className={styles["left"]}>
           <div className={styles["title"]}>
-            <img src="/banner.svg" height="130px" width="300px"></img>
+            <img
+              alt="Website Logo"
+              src="/banner.svg"
+              height="130px"
+              width="300px"
+            ></img>
           </div>
           <div className={styles["logos"]}>
             <div>
