@@ -12,6 +12,7 @@ export default function Layout({ children }: Props) {
       <main>
         <StateContextProvider>
           <Header />
+
           {children}
           <Footer />
         </StateContextProvider>

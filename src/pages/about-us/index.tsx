@@ -6,7 +6,6 @@ const AboutUs = () => {
     <div className={styles["about-us-page"]}>
       <div className={styles["about-us-title"]}>
         <Typography sx={{ fontSize: "100px" }}>About Us</Typography>
-        <Typography variant="h5">Home &gt;&gt; About Us</Typography>
       </div>
       <div className={styles["about-us-description"]}>
         <div className={styles["left"]}>

@@ -3,39 +3,55 @@
 .profile-page{
     min-height: 100vh;
     color: $tertiary-color;
+    background-color: rgb(222, 243, 246);
     &>.profile-title{
         padding-top: 6rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 50vh;
-        background-color: $primary-color;
+        min-height: 47vh;
         flex-direction: column;
     }
     & .profile-description{
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: $primary-color;
+        color: $bg-color;
         width: 100%;
         &>.details{
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
+            justify-content: flex-start;
+            // background-color: rgb(104, 53, 2);
+            background-image: url("/profile2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 2rem;
             gap: 3rem;
             padding-top: 2rem;
+            border: 5px solid $bg-color;
+            padding: 2rem;
+            margin-bottom: 2rem;
             &>.detail{
                 display: flex;
+                align-items: center;
                 gap: 4rem;
-                &>.inner-box{
-                    background-color: white;
-                    width: 20rem;
-                    min-height: 3rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: black;
-                    font-weight: 700;
+                &>.user-detail{
+                    &>label{
+                        font-size: medium;
+                        font-weight: 600;
+                    }
+                    &>.inner-box{
+                        background-color: white;
+                        width: 22rem;
+                        min-height: 3rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $bg-color;
+                        font-weight: 700;
+                    }
                 }
             }
         }

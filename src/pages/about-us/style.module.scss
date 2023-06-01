@@ -3,22 +3,22 @@
 .about-us-page{
     min-height: 100vh;
     color: $tertiary-color;
+    background-color: rgb(222, 243, 246);
     &>.about-us-title{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 50vh;
-        padding-top: 6rem;
-        background-color: $primary-color;
+        min-height: 48vh;
+        padding-top: 8rem;
     }
     & .about-us-description{
         width: 100%;
-        color: $secondary-color;
+        color: $bg-color;
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        padding: 1rem 1.3rem;
+        padding: 0.8rem 1.3rem;
         &>.left{
             color: $primary-color;
         }
