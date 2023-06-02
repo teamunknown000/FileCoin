@@ -13,3 +13,5 @@ export const FILE_COIN_ACCOUNT = process.env.FILE_COIN_ACCOUNT || "";
 if(!FILE_COIN_ACCOUNT.length) {
     throw new Error("FILE_COIN_ACCOUNT missing in the environment variables. Define in config.env")
 }
+
+export const PORT = +(process.env.PORT || 3000)

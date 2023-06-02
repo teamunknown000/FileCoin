@@ -26,17 +26,17 @@ const Product = (props: ProductProps) => {
           paddingRight: "5px",
         }}
       >
-        <Image
+        <img
           style={{
             borderBottomRightRadius: "6rem",
             borderBottomLeftRadius: "6rem",
             borderTopLeftRadius: "3px",
-            borderTopRightRadius: "3px",
-            height: "750px",
-            width: "100%"
+            borderTopRightRadius: "3px"
           }}
           src={props.url}
           alt="home page image"
+          height={"60%"}
+          width={"100%"}
         />
       </div>
     </div>
