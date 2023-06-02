@@ -3,6 +3,7 @@ import Carousel from "~/components/carousel";
 import { dark } from "~/styles/palette";
 import IProduct from "~/types/product";
 import Spinner from "~/components/spinner";
+import ProductCarousel from "~/components/product-carousel";
 
 export default function Home() {
   const productData = [] as IProduct[]

@@ -11,7 +11,7 @@
   top: 0;
   color: $tertiary-color;
   z-index: 1000;
-  
+  gap: 1rem;
   &>.main {
     display: flex;
     background-color: transparent;
@@ -20,13 +20,31 @@
     width: 80%;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    padding-left: 1rem;
+    padding-left: 2rem;
     padding-right: 1rem;
     border-radius: .8rem;
     border: 1px solid $tertiary-color;
+    &>.left{
+      display: flex;
+    }
     &>.center, &>.right {
       display: flex;
       gap: 1.5rem;
     }
+  }
+  &>.wallet-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(25px) saturate(4);
+    border-radius: .8rem;
+    border: 1px solid $tertiary-color;
+  }
+  &>.wallet-btn:hover{
+    cursor: pointer;
+  }
+  &>.wallet-btn:hover{
+    cursor: pointer;
   }
 }

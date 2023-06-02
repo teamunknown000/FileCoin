@@ -5,4 +5,5 @@ export default interface IProduct extends MongoDocument {
     description: string
     images: string[]
     thumbImage: number
+    categories: MongoDocument["_id"][]
 }

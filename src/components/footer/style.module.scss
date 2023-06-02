@@ -22,13 +22,14 @@
             flex-direction: column;
             &>.title{
                 display: flex;
-                justify-content: center;
-                align-items: center;
                 height: 10rem;
             }
             &>.logos{
                 display: flex;
                 gap: 2rem;
+                justify-content: center;
+                color: $primary-color;
+                align-items: flex-start;
             }
         }
         &>.center-left,&>.center-right{
@@ -50,6 +51,9 @@
             flex-direction: column;
             justify-content: space-evenly;
             gap: 2rem;
+            &>.title{
+                color: $primary-color
+            }
             &>.contacts{
                 display: flex;
                 flex-direction: column;
@@ -61,5 +65,6 @@
         display: flex;
         justify-content: space-between;
         padding: 3rem;
+        color: $primary-color
     }
 }

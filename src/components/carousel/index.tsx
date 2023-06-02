@@ -1,7 +1,6 @@
 import type { Schema } from "mongoose";
 import MuiCarousel from "react-material-ui-carousel";
 import IProduct from "~/types/product";
-import Image from "next/image"
 
 interface ProductProps {
   url: string;

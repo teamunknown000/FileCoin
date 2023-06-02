@@ -8,3 +8,10 @@ export enum Models {
     seller = "seller",
     user = "user"
 }
+
+export enum HttpMethods {
+    post = "POST",
+    get = "GET",
+    put = "PUT",
+    delete = "DELETE",
+}

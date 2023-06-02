@@ -1,0 +1,9 @@
+@import "src/styles/palette.dark.scss";
+
+.mycard{
+    min-width: 300px;
+    height: 400px;
+    color: $primary-color;
+    margin: 10px;
+    background-color: $tertiary-color;
+}
