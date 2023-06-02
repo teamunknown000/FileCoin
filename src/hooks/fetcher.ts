@@ -1,66 +1,20 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
-import { PORT } from "~/config"
-import { IApiResponse } from "~/types"
-
-const baseUrl = `https://localhost:${PORT}/`
-
-const apiBasePath = createApi({
-    baseQuery: fetchBaseQuery({ baseUrl }),
-    endpoints: () => ({})
-})
+import useSwr from "swr"
+import useSwrMutation from "swr/mutation"
+import type { IApiResponse } from "~/types"
+import { fetcher, poster } from "~/utils/api-handler"
 
 export function useGetRequest<T>(url: string) {
-    const { useGetRequestQuery } = apiBasePath.injectEndpoints({
-        endpoints: (build) => ({
-            getRequest: build.query({
-                query: () => ({ url }),
-                transformResponse: (res: IApiResponse) => res.data as T
-            })
-        })
-    })
-    return useGetRequestQuery
+    return useSwr<T, IApiResponse>(url, fetcher<T>)
 }
 
 export function usePostRequest<T>(url: string) {
-    const { usePostRequestMutation } = apiBasePath.injectEndpoints({
-        endpoints: (build) => ({
-            postRequest: build.mutation({
-                query: (data) => ({ 
-                    url, 
-                    method: "POST",
-                    body: data
-                }),
-                transformResponse: (res: IApiResponse) => res.data as T,
-            })
-        })
-    })
-    return usePostRequestMutation
+    return useSwrMutation<T, IApiResponse>(url, poster<T>)
 }
 
 export function usePutRequest<T>(url: string) {
-    const { usePutRequestMutation } = apiBasePath.injectEndpoints({
-        endpoints: (build) => ({
-            putRequest: build.mutation({
-                query: (data) => ({ 
-                    url, 
-                    method: "PUT",
-                    body: data
-                }),
-                transformResponse: (res: IApiResponse) => res.data as T,
-            })
-        })
-    })
-    return usePutRequestMutation
+    return useSwrMutation<T, IApiResponse>(url, poster<T>)
 }
 
 export function useDeleteRequest<T>(url: string) {
-    const { useDeleteRequestMutation } = apiBasePath.injectEndpoints({
-        endpoints: (build) => ({
-            deleteRequest: build.mutation({
-                query: () => ({ url, method: "DELETE" }),
-                transformResponse: (res: IApiResponse) => res.data as T
-            })
-        })
-    })
-    return useDeleteRequestMutation
+    return useSwrMutation<T, IApiResponse>(url, poster<T>)
 }
