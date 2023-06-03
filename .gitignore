@@ -39,3 +39,4 @@ test
 test*.*
 src/artifacts
 src/cache
+.env
